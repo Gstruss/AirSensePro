@@ -2,4 +2,6 @@
 
 Proyecto Integrador conformado por: Danna Beltrán, Daniel López, Dilan Páez, Jahaira Palencia y Geoffrey Struss
 
-Desarrollo de una plataforma web que permita visualizar información de agentes contaminantes del aire a través de sensores para el control y monitoreo de las emisiones en empresas textiles y productoras de plástico en la zona industrial de Bogotá.
+Desarrollar una plataforma web que brinde a los usuarios información en tiempo real sobre 
+agentes contaminantes del aire e información meteorológica en la ciudad de Bogotá, 
+utilizando la ubicación del usuario para focalizar la información de manera precisa
