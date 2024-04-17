@@ -8,4 +8,4 @@ utilizando la ubicación del usuario para focalizar la información de manera pr
 
 Página web del Proyecto: https://gstruss.github.io/AirSensePro/
 
-Speech del Proyecto: 
+Speech del Proyecto: https://www.youtube.com/watch?v=5YHhqZae3XA&t=42s
