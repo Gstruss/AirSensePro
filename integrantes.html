@@ -11,6 +11,12 @@
 <link rel="stylesheet" href="style.css">
 <script src="style.css"></script>
 </head>
+<style>
+   #main-container {
+    max-height: 95vh;
+    overflow-y: scroll;
+}
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -39,7 +45,7 @@
 
 
 
-    <div class="container">
+     <div id="main-container" class="container-fluid">
         <div class="row">
           <div class="col-md-6">
             <button class="btn btn-primary" style="display: block; width: 100%;" onclick="mostrarInfo('Integrante 1')">Danna Beltrán</button>
