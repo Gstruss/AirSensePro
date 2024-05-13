@@ -7,20 +7,6 @@ body {
     background: linear-gradient(to right, #00987f, #509cda)
   }
 
-  .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
 *{
     margin: 0;
     padding: 0;
