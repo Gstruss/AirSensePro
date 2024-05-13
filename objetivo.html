@@ -9,6 +9,23 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="style.css"></script>
+<style>
+    .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        color: white;
+        padding: 20px;
+    }
+    .grey-bg {
+        background-color: #687888;
+    }
+    .white-bg {
+        background-color: #9fb89b;
+    }
+</style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,101 +52,81 @@
            </div>
         </div>
      </nav>
-<div class="container-fluid">
-    <style>
-        .section {
-        height: 25vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        }
-        .grey-bg {
-        background-color: #264f79;
-        }
-        .white-bg {
-        background-color: #cc2929;
-        }
-    </style>
-    <div class="row">
-        <div class="col-12 section grey-bg">
-            <h1>Objetivo General</h1>
-            <p>Desarrollar una plataforma web que brinde a los usuarios información en tiempo real sobre 
-                agentes contaminantes del aire e información meteorológica en la ciudad de Bogotá, 
-                utilizando la ubicación del usuario para focalizar la información de manera precisa.</p>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 section grey-bg">
+                <h1>Objetivo General</h1>
+                <p>Desarrollar una plataforma web que brinde a los usuarios información en tiempo real sobre agentes contaminantes del aire e información meteorológica en la ciudad de Bogotá, utilizando la ubicación del usuario para focalizar la información de manera precisa.</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 section white-bg">
-            <h1>Objetivos Específicos</h1>
-            <p>
-                ❖ 1. Semestre:
-                ⮚ Identificar los diferentes agentes contaminantes en el aire que causan mayor 
-                repercusión en la salud de las personas mediante una búsqueda documental. 
-                ⮚ Realizar una búsqueda de antecedentes con el fin de fundamentar la información 
-                respecto a plataformas web de medición y monitoreo del aire que existen.
-                </p>
-                <p>
-                ❖ 2. Semestre:
-                ⮚ Realizar y socializar una encuesta para la comunidad San bonaventuriana sobre el 
-                conocimiento e interés respecto a la calidad del aire en Bogotá.
-                ⮚ Crear un MockUp inicial del diseño pensado para la plataforma web del proyecto.
-                </p>
-                <p>
-                ❖ 3. Semestre:
-                ⮚ Crear las conexiones para la interacción entre frontend y backend de manera parcial 
-                mediante el uso de bases de datos y la plataforma web.
-                ⮚ Realizar las vistas para mostrar la información en la plataforma web mediante el 
-                uso de mockups.
-                </p>
-                <p>
-                ❖ 4. Semestre:
-                ⮚ Ajustar el enfoque del Proyecto.
-                ⮚ Crear las conexiones para la interacción entre frontend y backend de manera parcial 
-                mediante el uso de bases de datos y la plataforma web.
-                ⮚ Realizar más vistas para mostrar la información en la plataforma web mediante el 
-                uso de mockups.
-                </p>
+        <div class="row">
+            <div class="col-12 section white-bg">
+                <h1>Objetivos Específicos</h1>
+                <ul>
+                    <li>1. Semestre:
+                        <ul>
+                            <li>Identificar los diferentes agentes contaminantes en el aire que causan mayor repercusión en la salud de las personas mediante una búsqueda documental.</li>
+                            <li>Realizar una búsqueda de antecedentes con el fin de fundamentar la información respecto a plataformas web de medición y monitoreo del aire que existen.</li>
+                        </ul>
+                    </li>
+                    <li>2. Semestre:
+                        <ul>
+                            <li>Realizar y socializar una encuesta para la comunidad San bonaventuriana sobre el conocimiento e interés respecto a la calidad del aire en Bogotá.</li>
+                            <li>Crear un MockUp inicial del diseño pensado para la plataforma web del proyecto.</li>
+                        </ul>
+                    </li>
+                    <li>3. Semestre:
+                        <ul>
+                            <li>Crear las conexiones para la interacción entre frontend y backend de manera parcial mediante el uso de bases de datos y la plataforma web.</li>
+                            <li>Realizar las vistas para mostrar la información en la plataforma web mediante el uso de mockups.</li>
+                        </ul>
+                    </li>
+                    <li>4. Semestre:
+                        <ul>
+                            <li>Ajustar el enfoque del Proyecto.</li>
+                            <li>Crear las conexiones para la interacción entre frontend y backend de manera parcial mediante el uso de bases de datos y la plataforma web.</li>
+                            <li>Realizar más vistas para mostrar la información en la plataforma web mediante el uso de mockups.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 section grey-bg">
-            <h1>Planteamiento del problema</h1>
-            <p>La ciudad de Bogotá enfrenta graves problemas de contaminación atmosférica, especialmente 
-                en términos de concentraciones de material particulado PM2.5 y PM10, óxidos de nitrógeno y
-                dióxido de azufre, que superan en muchos casos los límites establecidos por la Organización 
-                Mundial de la Salud (OMS) y la normativa nacional. Estas altas concentraciones de contaminantes 
-                atmosféricos tienen un impacto directo en la salud de la población, aumentando el riesgo de 
-                enfermedades respiratorias, cardiovasculares y cáncer, además de afectar negativamente el medio 
-                ambiente.</p>
-              
-                <p>Además, la ciudad de Bogotá es conocida por su variabilidad climática, con cambios repentinos 
-                en las condiciones meteorológicas que pueden influir en la dispersión de contaminantes y en la 
-                calidad del aire. Por lo tanto, es importante contar con información actualizada y en tiempo real 
-                sobre la calidad del aire y las condiciones meteorológicas en diferentes zonas de la ciudad para 
-                poder tomar medidas preventivas y de mitigación adecuadas (Secretaría de Ambiente, 2020).</p>
-              
-                <p>En este contexto, el desarrollo de una plataforma web que permita acceder a información de 
-                agentes contaminantes del aire e información meteorológica en tiempo real, utilizando APIs según 
-                la ubicación del usuario en Bogotá, se presenta como una solución innovadora y eficaz para 
-                concientizar a la población sobre la importancia de la calidad del aire y promover hábitos y 
-                comportamientos más sostenibles y saludables. Además, esta plataforma podría ser de utilidad 
-                para instituciones públicas y privadas, así como para investigadores y tomadores de decisiones, en 
-                la implementación de políticas y estrategias para mejorar la calidad del aire en la ciudad.</p>
-              
+        <div class="row">
+            <div class="col-12 section grey-bg">
+                <h1>Planteamiento del problema</h1>
+                <p>La ciudad de Bogotá enfrenta graves problemas de contaminación atmosférica, especialmente en términos de concentraciones de material particulado PM2.5 y PM10, óxidos de nitrógeno y dióxido de azufre, que superan en muchos casos los límites establecidos por la Organización Mundial de la Salud (OMS) y la normativa nacional. Estas altas concentraciones de contaminantes atmosféricos tienen un impacto directo en la salud de la población, aumentando el riesgo de enfermedades respiratorias, cardiovasculares y cáncer, además de afectar negativamente el medio ambiente.</p>
+    
+                <p>Además, la ciudad de Bogotá es conocida por su variabilidad climática, con cambios repentinos en las condiciones meteorológicas que pueden influir en la dispersión de contaminantes y en la calidad del aire. Por lo tanto, es importante contar con información actualizada y en tiempo real sobre la calidad del aire y las condiciones meteorológicas en diferentes zonas de la ciudad para poder tomar medidas preventivas y de mitigación adecuadas (Secretaría de Ambiente, 2020).</p>
+    
+                <p>En este contexto, el desarrollo de una plataforma web que permita acceder a información de agentes contaminantes del aire e información meteorológica en tiempo real, utilizando APIs según la ubicación del usuario en Bogotá, se presenta como una solución innovadora y eficaz para concientizar a la población sobre la importancia de la calidad del aire y promover hábitos y comportamientos más sostenibles y saludables. Además, esta plataforma podría ser de utilidad para instituciones públicas y privadas, así como para investigadores y tomadores de decisiones, en la implementación de políticas y estrategias para mejorar la calidad del aire en la ciudad.</p>
+    
                 <h2>Pregunta problema</h2>
                 <p>¿Cómo monitorear los agentes contaminantes a través de una plataforma web?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 section white-bg">
+                <h1>Planteamiento del problema</h1>
+                <p>La ciudad de Bogotá enfrenta graves problemas de contaminación atmosférica, especialmente en términos de concentraciones de material particulado PM2.5 y PM10, óxidos de nitrógeno y dióxido de azufre, que superan en muchos casos los límites establecidos por la Organización Mundial de la Salud (OMS) y la normativa nacional. Estas altas concentraciones de contaminantes atmosféricos tienen un impacto directo en la salud de la población, aumentando el riesgo de enfermedades respiratorias, cardiovasculares y cáncer, además de afectar negativamente el medio ambiente.</p>
+    
+                <p>Además, la ciudad de Bogotá es conocida por su variabilidad climática, con cambios repentinos en las condiciones meteorológicas que pueden influir en la dispersión de contaminantes y en la calidad del aire. Por lo tanto, es importante contar con información actualizada y en tiempo real sobre la calidad del aire y las condiciones meteorológicas en diferentes zonas de la ciudad para poder tomar medidas preventivas y de mitigación adecuadas (Secretaría de Ambiente, 2020).</p>
+    
+                <p>En este contexto, el desarrollo de una plataforma web que permita acceder a información de agentes contaminantes del aire e información meteorológica en tiempo real, utilizando APIs según la ubicación del usuario en Bogotá, se presenta como una solución innovadora y eficaz para concientizar a la población sobre la importancia de la calidad del aire y promover hábitos y comportamientos más sostenibles y saludables. Además, esta plataforma podría ser de utilidad para instituciones públicas y privadas, así como para investigadores y tomadores de decisiones, en la implementación de políticas y estrategias para mejorar la calidad del aire en la ciudad.</p>
+    
+                <h2>Pregunta problema</h2>
+                <p>¿Cómo monitorear los agentes contaminantes a través de una plataforma web?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 section grey-bg">
+                <h1>MockUps</h1>
+                <div class="d-flex justify-content-center">
+                    <img src="img/mockup2.jpg" alt="MockUp" title="Mockup1" style="margin: 5px;">
+                    <img src="img/mockup3.jpg" alt="MockUp" title="Mockup2" style="margin: 5px;">
+                    <img src="img/Mockupreal.png" alt="MockUp" title="Mockup3" style="margin: 5px;">
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 section white-bg">
-            <h1>MockUps</h1>
-                <p><img src="img/mockup2.jpg" alt="MockUp" width="400" height="300" title="Mockup1">
-                <img src="img/mockup3.jpg" alt="MockUp" width="400" height="300" title="Mockup2">
-                <img src="img/Mockupreal.png" alt="MockUp" width="400" height="300" title="Mockup3"></p>
-        </div>
-    </div>
-</div>
 </body>
 </html>
