@@ -14,30 +14,6 @@ body {
     box-sizing: border-box;
 }
 
-.footer{
-    background-color: black;
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    color: white;
-    padding: 20px;
-}
-.grey-bg {
-    background: linear-gradient(to right, #005a4b88, #305d8188)
-}
-.white-bg {
-    background: linear-gradient(to right, #2d597c81, #004d4086)
-}
-#main-container {
-    max-height: 70vh;
-    overflow-y: scroll;
-}
-
 .contenedor{
     width: 90%;
     max-width: 1200px;
