@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow: hidden;
+    background: linear-gradient(to right, #005a4bb9, #305d81c2)
   }
   canvas {
     position: absolute;
