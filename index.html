@@ -19,60 +19,60 @@
         let bubbles = [];
 
         class Bubble {
-        constructor(x, y, radius, color, dx, dy) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.color = color;
-            this.dx = dx;
-            this.dy = dy;
-        }
-
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
-        }
-
-        update() {
-            this.x += this.dx;
-            this.y += this.dy;
-            if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
-            this.dx = -this.dx;
+            constructor(x, y, radius, color, dx, dy) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+                this.dx = dx;
+                this.dy = dy;
             }
-            if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
-            this.dy = -this.dy;
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
             }
-            this.draw();
-        }
+
+            update() {
+                this.x += this.dx;
+                this.y += this.dy;
+                if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+                    this.dx = -this.dx;
+                }
+                if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+                    this.dy = -this.dy;
+                }
+                this.draw();
+            }
         }
 
         function createBubbles() {
-        for (let i = 0; i < 50; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            const radius = Math.random() * 20 + 5;
-            const color = '#76D7C4';
-            const dx = (Math.random() - 0.5) * 5;
-            const dy = (Math.random() - 0.5) * 5;
-            bubbles.push(new Bubble(x, y, radius, color, dx, dy));
-        }
+            for (let i = 0; i < 50; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const radius = Math.random() * 20 + 5;
+                const color = '#76D7C4';
+                const dx = (Math.random() - 0.5) * 5;
+                const dy = (Math.random() - 0.5) * 5;
+                bubbles.push(new Bubble(x, y, radius, color, dx, dy));
+            }
         }
 
         function animate() {
-        requestAnimationFrame(animate);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        bubbles.forEach(bubble => {
-            bubble.update();
-        });
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            bubbles.forEach(bubble => {
+                bubble.update();
+            });
         }
 
         createBubbles();
         animate();
     </script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">AirSensePro</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
