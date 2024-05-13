@@ -206,3 +206,17 @@ body {
         transform: translateY(0);
     }
 }
+.section {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.grey-bg {
+    background-color: #f8f9fa;
+}
+.white-bg {
+    background-color: #ffffff;
+}
