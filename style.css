@@ -1,8 +1,12 @@
 body {
     margin: 0;
     overflow: hidden;
+  }
+
+  .pestañas {
     background: linear-gradient(to right, #00493d, #1c374d)
   }
+
   canvas {
     position: absolute;
     background: linear-gradient(to right, #00987f, #509cda)
