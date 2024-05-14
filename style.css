@@ -4,7 +4,8 @@ body {
   }
 
   .pestañas {
-    background: linear-gradient(to right, #00493d, #1c374d)
+    background: linear-gradient(to right, #00493d, #1c374d);
+    background-color: #1c374d;
   }
 
   canvas {
