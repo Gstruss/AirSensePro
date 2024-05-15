@@ -20,6 +20,15 @@ body {
     overflow: auto;
   }
 
+  #image-container {
+    max-width: 400px;
+    margin: 50px auto;
+}
+    #image-container img {
+    max-width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
   canvas {
     position: absolute;
     background: linear-gradient(to right, #00987f, #509cda)

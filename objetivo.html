@@ -92,9 +92,28 @@
 <div class="division1">
    <div class="col-md-5">
       <h1>MockUps</h1>
-          <img src="img/mockup2.jpg" class="img-fluid" alt="MockUp" title="Mockup1">
-          <img src="img/mockup3.jpg" class="img-fluid" alt="MockUp" title="Mockup2">
-          <img src="img/Mockupreal.png" class="img-fluid" alt="MockUp" title="Mockup3">
+        <div id="image-container">
+            <img src="https://via.placeholder.com/400" id="image" alt="Image">
+        </div>
+        <script>
+            const image = document.getElementById('image');
+            const images = [
+               'img/mockup2.jpg',
+               'img/mockup3.jpg',
+               'img/Mockupreal.png' 
+            ];
+            let currentImage = 0;
+            function changeImage() {
+                image.style.opacity = 0;
+        
+                setTimeout(() => {
+                    image.src = images[currentImage];
+                    currentImage = (currentImage + 1) % images.length;
+                    image.style.opacity = 1;
+                }, 1000);
+            }
+            setInterval(changeImage, 3000);
+        </script>
       </div>
   </div>
 </div>
