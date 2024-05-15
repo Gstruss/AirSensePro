@@ -29,6 +29,20 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
   canvas {
     position: absolute;
     background: linear-gradient(to right, #00987f, #509cda)
