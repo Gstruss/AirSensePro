@@ -38,6 +38,12 @@ body {
     width: 100%;
 }
 
+.footer2 {
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
 .footer a {
     color: white;
     text-decoration: none;
