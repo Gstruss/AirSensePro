@@ -20,15 +20,6 @@ body {
     overflow: auto;
   }
 
-  .division3 {
-    background: linear-gradient(to right, #1c374d, #00493d);
-    background-color: #1c374d;
-    color: white;
-    padding: 20px;
-    text-align: center justify;
-    overflow: auto;
-  }
-
   #image-container {
     max-width: 400px;
     margin: 100px auto;
