@@ -24,8 +24,8 @@ body {
     background: linear-gradient(to right, #1c374d, #00493d);
     background-color: #1c374d;
     color: white;
-    height: 100vh;
     padding: 20px;
+    max-height: 100vh;
     text-align: center justify;
     overflow: auto;
   }
