@@ -109,16 +109,33 @@
                         <img src="img/Logo.png" class="img-fluid mx-auto d-block" style="width: 40%; height: 40%;" alt="Logo">
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form onsubmit="return redirectPage()">
                             <div class="form-group">
                                 <input type="text" placeholder="Usuario" class="form-control" id="text">
                             </div>
                             <div class="form-group">
                                 <input type="password" placeholder="Contraseña" class="form-control" id="password">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;" onclick="window.location.href = 'principal.html';">Acceder</button>
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Acceder</button>
                         </form>
                     </div>
+                    
+                    <script>
+                        function redirectPage() {
+                            var usuario = document.getElementById("text").value;
+                            var contrasena = document.getElementById("password").value;
+                            
+                            // Verificar usuario y contraseña aquí
+                            
+                            if(usuario === "admin" && contrasena === "1234") {
+                                window.location.href = 'principal.html';
+                                return false;
+                            } else {
+                                alert("Usuario y/o contraseña incorrectos");
+                                return false;
+                            }
+                        }
+                    </script> 
                 </div>
             </div>
         </div>
