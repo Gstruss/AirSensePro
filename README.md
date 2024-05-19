@@ -1,9 +1,13 @@
 # AirSensePro
 
-Proyecto Integrador conformado por: Danna Beltrán, Daniel López, Dilan Páez, Jahaira Palencia y Geoffrey Struss
+Welcome,
 
-Nuestro Proyecto tiene como propósito desarrollar una plataforma web que brinde a los usuarios información en tiempo real sobre agentes contaminantes del aire e información meteorológica en la ciudad de Bogotá, utilizando la ubicación del usuario para focalizar la información de manera precisa.
+We are pleased to present our Integrative Project formed by Danna Beltrán, Daniel López, Dilan Páez, Jahaira Palencia, and Geoffrey Struss.
 
-Plataforma web del Proyecto: https://gstruss.github.io/AirSensePro/
+The purpose of our project is to develop a web platform that provides users with real-time information about air pollutants and weather information in the city of Bogotá, using the user's location to focus the information accurately.
 
-Speech del Proyecto: https://www.youtube.com/watch?v=5YHhqZae3XA
+We hope you enjoy our work and find the information we offer helpful.
+
+Project Web Platform: https://gstruss.github.io/AirSensePro/
+
+Speech: https://www.youtube.com/watch?v=5YHhqZae3XA
