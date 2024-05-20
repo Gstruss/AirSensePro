@@ -105,7 +105,7 @@
                 <h3 class="text-center">Registrarse en AirSensePro</h3>
             </div>
             <div class="card-body">
-                <form>
+                <form id="registrationForm">
                   <div class="form-group">
                     <label for="nombre_usuario">Nombre de Usuario</label>
                     <input type="text" class="form-control" id="nombre_usuario">
@@ -114,7 +114,7 @@
                     <label for="contraseña">Contraseña</label>
                     <input type="password" class="form-control" id="contraseña">
                 </div>                
-                    <button type="button" id="registerBtn" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Registrarse</button>
+                    <button type="submit" id="registerBtn" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Registrarse</button>
                   </form>
             </div>
         </div>
@@ -122,12 +122,14 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
           $(document).ready(function(){
-            const form = $('form');
+            const form = $('#registrationForm');
             const registerBtn = $('#registerBtn');
 
-        registerBtn.click(function(event){
-          const username = $('#nombre_usuario').val();
-          const password = $('#contraseña').val();
+            form.submit(function(event){ // Cambiado de 'registerBtn.click' a 'form.submit'
+            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+            const username = $('#nombre_usuario').val();
+            const password = $('#contraseña').val();
 
         $.ajax({
             url: 'guardar_usuario.php',
