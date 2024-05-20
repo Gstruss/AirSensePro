@@ -16,5 +16,3 @@ conexionbd.connect(function(err) {
   });
   
   module.exports = conexionbd;
-
-  conexionbd.end();
