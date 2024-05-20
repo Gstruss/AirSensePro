@@ -1,29 +1,27 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "asp";
+$host = 'localhost';
+$user = 'root';
+$password = '';
+$database = 'asp';
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conexionbd = new mysqli($host, $user, $password, $database);
 
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+if ($conexionbd->connect_error) {
+    die("Error de conexión a la base de datos: " . $conexionbd->connect_error);
 }
 
-// Obtener los datos enviados por AJAX
-$username = $_POST['username'];
-$password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre_usuario = $_POST['nombre_usuario'];
+    $contraseña = $_POST['contraseña'];
 
-// Insertar los datos en la base de datos
-$sql = "INSERT INTO usuarios (username, password) VALUES ('$username', '$password')";
-if ($conn->query($sql) === TRUE) {
-    echo "Usuario registrado correctamente";
-} else {
-    echo "Error al registrar el usuario: " . $conn->error;
+    $query = "INSERT INTO usuarios (nombre_usuario, contraseña) VALUES ('$nombre_usuario', '$contraseña')";
+
+    if ($conexionbd->query($query) === TRUE) {
+        echo "Usuario registrado correctamente";
+    } else {
+        echo "Error al guardar el usuario: " . $conexionbd->error;
+    }
 }
 
-// Cerrar conexión
-$conn->close();
+$conexionbd->close();
 ?>

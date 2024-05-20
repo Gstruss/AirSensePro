@@ -130,9 +130,9 @@
               const password = document.getElementById('password').value;
       
               $.ajax({
-                  url: 'guardar_usuario.php', // Ruta a un archivo PHP encargado de guardar los datos en la base de datos
+                  url: 'guardar_usuario.php',
                   method: 'POST',
-                  data: { username: username, password: password },
+                  data: { nombre_usuario: username, contraseña: password },
                   success: function(response) {
                       console.log("Usuario registrado correctamente");
                   },
@@ -141,7 +141,8 @@
                   }
               });
           }
-      </script>      
+      </script>
+          
 
         </div>
     </div>
