@@ -13,11 +13,11 @@ if ($conn->connect_error) {
 }
 
 // Obtener los datos enviados por AJAX
-$username = $_POST['nombre_usuario'];
-$password = $_POST['contraseña'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 // Insertar los datos en la base de datos
-$sql = "INSERT INTO usuarios (nombre_usuario, contraseña) VALUES ('$username', '$password')";
+$sql = "INSERT INTO usuarios (username, password) VALUES ('$username', '$password')";
 if ($conn->query($sql) === TRUE) {
     echo "Usuario registrado correctamente";
 } else {
