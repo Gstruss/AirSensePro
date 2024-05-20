@@ -110,7 +110,7 @@
                   let username = document.getElementById('username').value;
                   let password = document.getElementById('password').value;
   
-                  fetch('127.0.0.1', {
+                  fetch('http://localhost/phpmyadmin/index.php?route=/database/structure&db=asp', {
                           method: 'POST',
                           headers: {
                               'Content-Type': 'application/json',
