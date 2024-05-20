@@ -127,27 +127,13 @@
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
                 
-                // Realizar la conexión con la base de datos
-                const mysql = require('mysql');
-                const conexionbd = mysql.createConnection({
-                  host: 'localhost',
-                  user: 'root',
-                  password: '',
-                  database: 'asp'
-                });
-                
-                conexionbd.connect(function(err) {
-                    if (err) throw err;
-                    console.log("Conectado a la base de datos MySQL!");
-                    
-                    const sql = "INSERT INTO usuarios (nombre_usuario, contraseña) VALUES (?, ?)";
-                    conexionbd.query(sql, [username, password], function (err, result) {
-                        if (err) throw err;
-                        console.log("Usuario registrado correctamente");
-                    });
-                });
+                // Simulando la inserción en base de datos
+                console.log("Nombre de usuario: " + username);
+                console.log("Contraseña: " + password);
+                console.log("Usuario registrado correctamente");
             }
         </script>
+        
         </div>
     </div>
 </div> 
