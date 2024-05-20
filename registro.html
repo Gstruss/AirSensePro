@@ -122,26 +122,29 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
           $(document).ready(function(){
-              const form = $('form');
-              const registerBtn = $('#registerBtn');
-      
-              registerBtn.click(function(event){
-                  const username = $('#username').val();
-                  const password = $('#password').val();
-      
-                  $.ajax({
-                      url: 'guardar_usuario.php',
-                      method: 'POST',
-                      data: { nombre_usuario: username, contraseña: password },
-                      success: function(response) {
-                          console.log("Usuario registrado correctamente");
-                      },
-                      error: function(xhr, status, error) {
-                          console.error("Error al guardar el usuario: " + error);
-                      }
-                  });
-              });
-          });
+    const form = $('form');
+    const registerBtn = $('#registerBtn');
+
+    registerBtn.click(function(event){
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        const username = $('#username').val();
+        const password = $('#password').val();
+
+        $.ajax({
+            url: 'guardar_usuario.php',
+            method: 'POST',
+            data: { nombre_usuario: username, contraseña: password },
+            success: function(response) {
+                console.log(response); // Muestra la respuesta del servidor en la consola
+            },
+            error: function(xhr, status, error) {
+                console.error("Error al guardar el usuario: " + error);
+            }
+        });
+    });
+});
+
         </script>
         </div>
     </div>
