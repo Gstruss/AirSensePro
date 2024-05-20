@@ -107,7 +107,7 @@
                 <h3 class="text-center">Registrarse en AirSensePro</h3>
             </div>
             <div class="card-body">
-                <form id="registrationForm">
+                <form onsubmit="guardarUsuario(event)">
                     <div class="form-group">
                         <label for="username">Nombre de Usuario</label>
                         <input type="text" class="form-control" id="username">
@@ -122,21 +122,31 @@
         </div>
         
         <script>
-            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            function guardarUsuario(event) {
                 event.preventDefault();
-                
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
                 
-                // Guardar en la base de datos local en MySQL Workbench
-                const db = openDatabase('usuarios', '1.0', 'asp', 2 * 1024 * 1024);
-                db.transaction(function(tx) {
-                    tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios (nombre, contraseña)');
-                    tx.executeSql('INSERT INTO usuarios (nombre, contraseña) VALUES (?, ?)', [username, password]);
+                // Realizar la conexión con la base de datos
+                const mysql = require('mysql');
+                const conexionbd = mysql.createConnection({
+                  host: 'localhost',
+                  user: 'root',
+                  password: '',
+                  database: 'asp'
                 });
                 
-                alert('Usuario registrado correctamente en la base de datos.');
-            });
+                conexionbd.connect(function(err) {
+                    if (err) throw err;
+                    console.log("Conectado a la base de datos MySQL!");
+                    
+                    const sql = "INSERT INTO usuarios (nombre_usuario, contraseña) VALUES (?, ?)";
+                    conexionbd.query(sql, [username, password], function (err, result) {
+                        if (err) throw err;
+                        console.log("Usuario registrado correctamente");
+                    });
+                });
+            }
         </script>
         </div>
     </div>
