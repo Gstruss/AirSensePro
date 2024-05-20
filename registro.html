@@ -109,7 +109,7 @@
                 <h3 class="text-center">Registrarse en AirSensePro</h3>
             </div>
             <div class="card-body">
-                <form onsubmit="guardarUsuario(event)">
+                <form>
                     <div class="form-group">
                         <label for="username">Nombre de Usuario</label>
                         <input type="text" class="form-control" id="username">
@@ -118,11 +118,11 @@
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Registrarse</button>
+                    <button type="button" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;" onclick="guardarUsuario(event)">Registrarse</button>
                 </form>
             </div>
         </div>
-        
+
         <script>
           function guardarUsuario(event) {
               event.preventDefault();
@@ -142,8 +142,6 @@
               });
           }
       </script>
-          
-
         </div>
     </div>
 </div> 
