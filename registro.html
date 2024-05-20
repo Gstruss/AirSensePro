@@ -114,18 +114,18 @@
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Registrarse</button>
+                    <button type="button" id="registerBtn" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Registrarse</button>
                   </form>
             </div>
         </div>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
           $(document).ready(function(){
               const form = $('form');
+              const registerBtn = $('#registerBtn');
       
-              form.submit(function(event){
-                  event.preventDefault();
+              registerBtn.click(function(event){
                   const username = $('#username').val();
                   const password = $('#password').val();
       
@@ -142,8 +142,7 @@
                   });
               });
           });
-      </script>
-      
+        </script>
         </div>
     </div>
 </div> 
