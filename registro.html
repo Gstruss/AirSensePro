@@ -118,30 +118,35 @@
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="button" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;" onclick="guardarUsuario(event)">Registrarse</button>
-                </form>
+                    <button type="submit" class="btn btn-primary btn-block" style="background-color: rgba(124, 226, 192, 0.74); color: black;">Registrarse</button>
+                  </form>
             </div>
         </div>
 
         <script>
-          function guardarUsuario(event) {
-              event.preventDefault();
-              const username = document.getElementById('username').value;
-              const password = document.getElementById('password').value;
+          document.addEventListener('DOMContentLoaded', function(){
+              const form = document.querySelector('form');
       
-              $.ajax({
-                  url: 'guardar_usuario.php',
-                  method: 'POST',
-                  data: { nombre_usuario: username, contraseña: password },
-                  success: function(response) {
-                      console.log("Usuario registrado correctamente");
-                  },
-                  error: function(xhr, status, error) {
-                      console.error("Error al guardar el usuario: " + error);
-                  }
+              form.addEventListener('submit', function(event){
+                  event.preventDefault();
+                  const username = document.getElementById('username').value;
+                  const password = document.getElementById('password').value;
+      
+                  $.ajax({
+                      url: 'guardar_usuario.php',
+                      method: 'POST',
+                      data: { nombre_usuario: username, contraseña: password },
+                      success: function(response) {
+                          console.log("Usuario registrado correctamente");
+                      },
+                      error: function(xhr, status, error) {
+                          console.error("Error al guardar el usuario: " + error);
+                      }
+                  });
               });
-          }
+          });
       </script>
+      
         </div>
     </div>
 </div> 
