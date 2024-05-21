@@ -45,25 +45,7 @@
            <div class="col-md-12">
          <h1>Descarga reporte excel</h1>
          <p></p>
-         <button onclick="generateReport()">Generar Reporte Excel</button>
-  <script>
-    function generateReport() {
-      const { spawn } = require('child_process');
-      const ls = spawn('node', ['generateReport.js']);
-      
-      ls.stdout.on('data', (data) => {
-        console.log(`stdout: ${data}`);
-      });
-
-      ls.stderr.on('data', (data) => {
-        console.error(`stderr: ${data}`);
-      });
-
-      ls.on('close', (code) => {
-        console.log(`Generación completada con código: ${code}`);
-      });
-    }
-  </script>
+         <button onclick="conexionbd()">Generar Reporte Excel</button>
            </div>
          </div>
       </div>
