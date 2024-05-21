@@ -45,7 +45,14 @@
            <div class="col-md-12">
          <h1>Descarga reporte excel</h1>
          <p></p>
-         <button onclick="conexionbd()">Generar Reporte Excel</button>
+         <button onclick="exportData()">Descargar Datos</button>
+         <script src="conexionbd.js"></script>
+         <script>
+         function exportData() {
+            // Llamar al proceso de conexión a la base de datos y exportar los datos a un archivo excel
+         conexionbd.exportData();
+         }
+         </script>
            </div>
          </div>
       </div>
