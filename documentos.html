@@ -43,6 +43,35 @@
       <div class="container">
          <div class="row">
            <div class="col-md-12">
+         <h1>Descarga reporte excel</h1>
+         <p></p>
+         <button onclick="generateReport()">Generar Reporte Excel</button>
+  <script>
+    function generateReport() {
+      const { spawn } = require('child_process');
+      const ls = spawn('node', ['generateReport.js']);
+      
+      ls.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+      });
+
+      ls.stderr.on('data', (data) => {
+        console.error(`stderr: ${data}`);
+      });
+
+      ls.on('close', (code) => {
+        console.log(`Generación completada con código: ${code}`);
+      });
+    }
+  </script>
+           </div>
+         </div>
+      </div>
+     </div>
+     <div class="division1">
+      <div class="container">
+         <div class="row">
+           <div class="col-md-12">
          <h1>Documento del Proyecto</h1>
          <a href="img/Doc_Final_AirSensePro.pdf" download><img src="img/pdf.png" class="img-fluid mx-auto" alt="Documento proyecto" width="300" height="200"></a><br>
            </div>
