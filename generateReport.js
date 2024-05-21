@@ -4,7 +4,6 @@ const XLSX = require('xlsx');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
     database: 'asp'
 });
 
